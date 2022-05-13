@@ -46,22 +46,22 @@ public class WSRecepcaoServerImpl implements WSRecepcaoServer {
     try {
       Host = host;
 
-      urlpandelo = new URL("http://"+host+":9876/WSPandelo?wsdl");
+      urlpandelo = new URL("http://"+host+":4733/WSPandelo?wsdl");
       qnamepandelo = new QName("http://MYC/","WSPandeloServerImplService");
       pandelo = Service.create(urlpandelo, qnamepandelo);
       spandelo = pandelo.getPort(WSPandeloServer.class);
 
-      urlcortes = new URL("http://"+host+":9877/WSCortes?wsdl");
+      urlcortes = new URL("http://"+host+":4734/WSCortes?wsdl");
       qnamecortes = new QName("http://MYC/","WSCortesServerImplService");
       cortes = Service.create(urlcortes, qnamecortes);
       scortes = cortes.getPort(WSCortesServer.class);
 
-      urlrecheios = new URL("http://"+host+":9878/WSRecheios?wsdl");
+      urlrecheios = new URL("http://"+host+":4735/WSRecheios?wsdl");
       qnamerecheios = new QName("http://MYC/","WSRecheiosServerImplService");
       recheios = Service.create(urlrecheios, qnamerecheios);
       srecheios = recheios.getPort(WSRecheiosServer.class);
 
-      urlcoberturas = new URL("http://"+host+":9879/WSCoberturas?wsdl");
+      urlcoberturas = new URL("http://"+host+":4736/WSCoberturas?wsdl");
       qnamecoberturas = new QName("http://MYC/","WSCoberturasServerImplService");
       coberturas = Service.create(urlcoberturas, qnamecoberturas);
       scoberturas = coberturas.getPort(WSCoberturasServer.class);

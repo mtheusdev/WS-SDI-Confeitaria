@@ -45,30 +45,30 @@ public class ServerPublisher {
 
 		// WS Recepcao
 		Endpoint ep = Endpoint.create(new WSRecepcaoServerImpl());
-		ep.publish("http://"+host+":9875/WSRecepcao");
+		ep.publish("http://"+host+":4732/WSRecepcao");
 
 		// WS Pandelo
 		Endpoint ep_pan = Endpoint.create(new WSPandeloServerImpl());
-		ep_pan.publish("http://"+host+":9876/WSPandelo");
+		ep_pan.publish("http://"+host+":4733/WSPandelo");
 
 		// WS Cortes
 		Endpoint ep_cor = Endpoint.create(new WSCortesServerImpl());
-		ep_cor.publish("http://"+host+":9877/WSCortes");
+		ep_cor.publish("http://"+host+":4734/WSCortes");
 
 		// WS Recheios
 		Endpoint ep_rec = Endpoint.create(new WSRecheiosServerImpl());
-		ep_rec.publish("http://"+host+":9878/WSRecheios");
+		ep_rec.publish("http://"+host+":4735/WSRecheios");
 
 		// WS Coberturas
 		Endpoint ep_cob = Endpoint.create(new WSCoberturasServerImpl());
-		ep_cob.publish("http://"+host+":9879/WSCoberturas");
+		ep_cob.publish("http://"+host+":4736/WSCoberturas");
 
 
 		System.out.println("* All done publishing. *");
 
 		try {
 			// ##### WS Recepcao  #####
-			URL url1 = new URL("http://"+host+":9875/WSRecepcao?wsdl");
+			URL url1 = new URL("http://"+host+":4732/WSRecepcao?wsdl");
 			QName qname1 = new QName("http://MYC/","WSRecepcaoServerImplService");
 			Service recepcao = Service.create(url1, qname1);
 			WSRecepcaoServer srecepcao = recepcao.getPort(WSRecepcaoServer.class);

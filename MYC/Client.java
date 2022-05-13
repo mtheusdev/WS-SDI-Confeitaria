@@ -29,7 +29,7 @@ public class Client {
       }
 
       // ##### WS Recepcao  #####
-      URL url1 = new URL("http://"+host+":9875/WSRecepcao?wsdl");
+      URL url1 = new URL("http://"+host+":4732/WSRecepcao?wsdl");
       QName qname1 = new QName("http://MYC/","WSRecepcaoServerImplService");
       Service recepcao = Service.create(url1, qname1);
       WSRecepcaoServer srecepcao = recepcao.getPort(WSRecepcaoServer.class);
